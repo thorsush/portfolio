@@ -1,15 +1,13 @@
+// import ProjectSection from "@/components/PeojectSection";
 import MotionSection from "../components/MotionSection";
-import { getTopRepositories } from "../lib/github";
 
 const navLinks = [
-  { href: "#projects", label: "Projects" },
+  // { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
   { href: "/resume.pdf", label: "Resume", external: true },
 ];
 
 export default async function HomePage() {
-  const { repos, error } = await getTopRepositories(4);
-
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-6xl px-6 pb-12 pt-6 md:px-10 md:pb-20 md:pt-8">
@@ -50,12 +48,12 @@ export default async function HomePage() {
             payment systems, and cloud-native applications.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
+            {/* <a
               href="#projects"
               className="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-white/40 hover:bg-white hover:text-black"
             >
               View Projects
-            </a>
+            </a> */}
             <a
               href="/resume.pdf"
               target="_blank"
@@ -67,44 +65,7 @@ export default async function HomePage() {
           </div>
         </MotionSection>
 
-        <MotionSection id="projects" className="mb-20 md:mb-28" delay={0.15}>
-          <div className="mb-8 flex items-end justify-between gap-4">
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              Projects
-            </h2>
-            <span className="text-sm text-white/50">Top repositories</span>
-          </div>
-
-          {error ? (
-            <div className="rounded-3xl border border-red-500/20 bg-red-950/20 p-6 text-sm text-red-200">
-              {error}
-            </div>
-          ) : (
-            <div className="grid gap-4 sm:grid-cols-2">
-              {repos.map((repo) => (
-                <article
-                  key={repo.id}
-                  className="group rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-zinc-900"
-                >
-                  <h3 className="text-xl font-medium tracking-tight text-white">
-                    {repo.name}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/65">
-                    {repo.description}
-                  </p>
-                  <a
-                    href={repo.htmlUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-flex text-sm font-medium text-white/80 transition-colors duration-200 group-hover:text-white"
-                  >
-                    View on GitHub
-                  </a>
-                </article>
-              ))}
-            </div>
-          )}
-        </MotionSection>
+        {/* <ProjectSection /> */}
 
         <MotionSection id="contact" className="mb-16" delay={0.2}>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
