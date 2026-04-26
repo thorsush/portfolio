@@ -1,7 +1,7 @@
 import Script from "next/script";
 import "./globals.css";
 
-const siteUrl = "https://thorsush.com";
+const siteUrl = "https://www.thorsush.com";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
