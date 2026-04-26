@@ -11,6 +11,10 @@ export const metadata = {
     template: "%s | Sushil Thorat",
   },
 
+  alternates: {
+    canonical: "/",
+  },
+
   description:
     "Developer specializing in high-performance APIs, secure payment systems, and cloud-native applications.",
 

@@ -31,3 +31,4 @@ Production-ready one-page portfolio built with Next.js (App Router), Tailwind CS
 
 Deploy directly to [Vercel](https://vercel.com/).
 redeploy
+redeploy
