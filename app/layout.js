@@ -24,7 +24,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: siteUrl + "/og_image.png",
+        url: "/og_image.png",
         width: 1200,
         height: 630,
         alt: "Sushil Thorat Portfolio",
@@ -37,7 +37,7 @@ export const metadata = {
     title: "Sushil Thorat - Full Stack Developer",
     description:
       "Developer specializing in high-performance APIs, secure payment systems, and cloud-native applications.",
-    images: [siteUrl + "/og_image.png"],
+    images: ["/og_image.png"],
   },
 
   icons: {
