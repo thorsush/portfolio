@@ -1,4 +1,5 @@
 import Script from "next/script";
+import ThemeProvider from "../components/ThemeProvider";
 import "./globals.css";
 
 const siteUrl = "https://www.thorsush.com";
@@ -82,7 +83,11 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="bg-background text-white antialiased">{children}</body>
+      <body className="antialiased">
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

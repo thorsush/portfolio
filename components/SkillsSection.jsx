@@ -73,7 +73,7 @@ export default function SkillsSection() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-4 text-sm uppercase tracking-[0.2em] text-white/50"
+          className="mb-4 text-sm uppercase tracking-[0.2em] text-black/40 dark:text-white/50"
         >
           Expertise
         </motion.p>
@@ -82,7 +82,7 @@ export default function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-3xl font-semibold tracking-tight text-white md:text-5xl"
+          className="text-3xl font-semibold tracking-tight text-black dark:text-white md:text-5xl"
         >
           What I Build With
         </motion.h2>
@@ -91,7 +91,7 @@ export default function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="mt-6 text-lg text-white/60"
+          className="mt-6 text-lg text-black/60 dark:text-white/60"
         >
           Leveraging a modern technology stack to build scalable, secure, and
           high-performance applications from the ground up.
@@ -111,21 +111,21 @@ export default function SkillsSection() {
             variants={cardVariants}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition-colors duration-500 hover:bg-white/[0.04]"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] p-8 transition-colors duration-500 hover:bg-black/[0.04] dark:hover:bg-white/[0.04]"
           >
             {/* Subtle glow effect on hover */}
             <div
-              className={`absolute -inset-px rounded-3xl bg-gradient-to-b from-white/10 to-transparent opacity-0 transition-opacity duration-500 ${
+              className={`absolute -inset-px rounded-3xl bg-gradient-to-b from-black/10 dark:from-white/10 to-transparent opacity-0 transition-opacity duration-500 ${
                 hoveredIndex === index ? "opacity-100" : ""
               }`}
               style={{ pointerEvents: "none" }}
             />
 
             <div>
-              <h3 className="mb-3 text-xl font-medium text-white/90 transition-colors duration-300 group-hover:text-white">
+              <h3 className="mb-3 text-xl font-medium text-black/90 dark:text-white/90 transition-colors duration-300 group-hover:text-black dark:group-hover:text-white">
                 {skillGroup.category}
               </h3>
-              <p className="mb-8 text-sm leading-relaxed text-white/50 transition-colors duration-300 group-hover:text-white/70">
+              <p className="mb-8 text-sm leading-relaxed text-black/50 dark:text-white/50 transition-colors duration-300 group-hover:text-black/70 dark:group-hover:text-white/70">
                 {skillGroup.description}
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function SkillsSection() {
               {skillGroup.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-white/5 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/70 backdrop-blur-sm transition-all duration-300 group-hover:border-white/15 group-hover:bg-white/10 group-hover:text-white"
+                  className="rounded-full border border-black/5 dark:border-white/5 bg-black/5 dark:bg-white/5 px-3 py-1.5 text-xs font-medium text-black/70 dark:text-white/70 backdrop-blur-sm transition-all duration-300 group-hover:border-black/15 dark:group-hover:border-white/15 group-hover:bg-black/10 dark:group-hover:bg-white/10 group-hover:text-black dark:group-hover:text-white"
                 >
                   {item}
                 </span>

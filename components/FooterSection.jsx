@@ -25,26 +25,26 @@ export default function FooterSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative mt-20 md:mt-32 border-t border-white/10 pt-16 pb-8 overflow-hidden"
+      className="relative mt-20 md:mt-32 border-t border-black/10 dark:border-white/10 pt-16 pb-8 overflow-hidden"
     >
       {/* Subtle top gradient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[1px] w-3/4 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[100px] w-1/2 bg-white/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[1px] w-3/4 bg-gradient-to-r from-transparent via-black/20 dark:via-white/30 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[100px] w-1/2 bg-black/5 dark:bg-white/5 blur-[100px] pointer-events-none" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16 relative z-10">
         {/* Left Side: Brand */}
         <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-medium tracking-tight text-white/95">
+          <h3 className="text-xl font-medium tracking-tight text-black/95 dark:text-white/95">
             Sushil Thorat
           </h3>
-          <p className="text-sm text-white/50 leading-relaxed max-w-xs">
+          <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed max-w-xs">
             Senior Full Stack Developer building secure systems.
           </p>
         </div>
 
         {/* Center: Navigation */}
         <div className="flex flex-col gap-4 md:items-center">
-          <h4 className="text-xs font-semibold uppercase tracking-widest text-white/30 mb-2">
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-black/30 dark:text-white/30 mb-2">
             Navigation
           </h4>
           <ul className="flex flex-col gap-3 text-sm">
@@ -52,10 +52,10 @@ export default function FooterSection() {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="group relative text-white/60 transition-colors duration-300 hover:text-white inline-block"
+                  className="group relative text-black/60 dark:text-white/60 transition-colors duration-300 hover:text-black dark:hover:text-white inline-block"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black dark:bg-white transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
             ))}
@@ -64,7 +64,7 @@ export default function FooterSection() {
 
         {/* Right Side: Socials */}
         <div className="flex flex-col gap-4 md:items-end">
-          <h4 className="text-xs font-semibold uppercase tracking-widest text-white/30 mb-2">
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-black/30 dark:text-white/30 mb-2">
             Connect
           </h4>
           <ul className="flex flex-col gap-3 text-sm md:items-end">
@@ -74,7 +74,7 @@ export default function FooterSection() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/60 transition-all duration-300 hover:text-white hover:-translate-y-0.5 inline-block"
+                  className="text-black/60 dark:text-white/60 transition-all duration-300 hover:text-black dark:hover:text-white hover:-translate-y-0.5 inline-block"
                 >
                   {social.name}
                 </a>
@@ -85,7 +85,7 @@ export default function FooterSection() {
       </div>
 
       {/* Bottom Row */}
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 border-t border-white/10 pt-8 text-xs text-white/40 relative z-10">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 border-t border-black/10 dark:border-white/10 pt-8 text-xs text-black/40 dark:text-white/40 relative z-10">
         <p>
           &copy; {currentYear} Sushil Thorat. Built with Next.js, TailwindCSS &
           Framer Motion.
@@ -96,7 +96,7 @@ export default function FooterSection() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span className="text-white/60 font-medium">
+          <span className="text-black/60 dark:text-white/60 font-medium">
             Open to opportunities
           </span>
         </div>
