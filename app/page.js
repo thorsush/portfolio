@@ -1,51 +1,25 @@
 // import ProjectSection from "@/components/PeojectSection";
 import MotionSection from "../components/MotionSection";
-
-const navLinks = [
-  // { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-  { href: "/resume.pdf", label: "Resume", external: true },
-];
+import SkillsSection from "../components/SkillsSection";
+import FooterSection from "../components/FooterSection";
+import NavBar from "../components/NavBar";
 
 export default async function HomePage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-6xl px-6 pb-12 pt-6 md:px-10 md:pb-20 md:pt-8">
-        <header className="sticky top-0 z-20 -mx-2 mb-16 bg-black/85 px-2 py-4 backdrop-blur-md md:mb-24">
-          <nav className="mx-auto flex max-w-6xl items-center justify-between">
-            <a
-              href="#"
-              className="text-base font-medium tracking-tight text-white/95"
-            >
-              Sushil Thorat
-            </a>
-            <ul className="flex items-center gap-5 text-sm text-white/80">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="transition-colors duration-200 hover:text-white"
-                    target={link.external ? "_blank" : undefined}
-                    rel={link.external ? "noopener noreferrer" : undefined}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
+        <NavBar />
 
         <MotionSection className="mb-20 md:mb-32" delay={0.1}>
           <p className="mb-6 text-sm uppercase tracking-[0.2em] text-white/50">
-            Developer Portfolio
+            Hi, I&apos;m Sushil
           </p>
-          <h1 className="max-w-4xl text-5xl font-semibold leading-tight tracking-tight text-white md:text-7xl">
-            Building scalable backend systems & seamless web experiences.
+          <h1 className="max-w-4xl text-5xl font-semibold leading-tight tracking-tight text-white md:text-7xl gradient-text">
+            Building secure & scalable digital products.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-            Full Stack Developer specializing in high-performance APIs, secure
-            payment systems, and cloud-native applications.
+            Senior Full Stack Developer specializing in secure payment APIs,
+            cloud-native infrastructure, and production-grade web applications.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             {/* <a
@@ -64,6 +38,8 @@ export default async function HomePage() {
             </a>
           </div>
         </MotionSection>
+
+        <SkillsSection />
 
         {/* <ProjectSection /> */}
 
@@ -97,12 +73,7 @@ export default async function HomePage() {
           </div>
         </MotionSection>
 
-        <footer className="border-t border-border pt-8 text-sm text-white/45">
-          <p>
-            © {new Date().getFullYear()} Sushil Thorat. Crafted with Next.js,
-            Tailwind CSS, and Framer Motion.
-          </p>
-        </footer>
+        <FooterSection />
       </div>
     </main>
   );
