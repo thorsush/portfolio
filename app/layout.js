@@ -71,8 +71,17 @@ const personSchema = {
 };
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                document.documentElement.classList.add('dark');
+              } catch (_) {}
+            `,
+          }}
+        />
         <Script
           id="person-schema"
           type="application/ld+json"

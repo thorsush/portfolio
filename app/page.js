@@ -14,7 +14,7 @@ export default async function HomePage() {
           <p className="mb-6 text-sm uppercase tracking-[0.2em] text-black/40 dark:text-white/50">
             Hi, I&apos;m Sushil
           </p>
-          <h1 className="max-w-4xl text-5xl font-semibold leading-tight tracking-tight text-black dark:text-white md:text-7xl gradient-text">
+          <h1 className="max-w-4xl text-5xl font-semibold leading-tight tracking-tight gradient-text dark:gradient-text md:text-7xl gradient-text">
             Building secure & scalable digital products.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-black/60 dark:text-white/70 md:text-xl">
